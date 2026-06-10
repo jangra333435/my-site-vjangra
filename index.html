@@ -1,183 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>India to UK Life - Immigration Support</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial;
-      background: #eef3ff;
-    }
+<title>India to UK Life - Premium App</title>
 
-    header {
-      background: linear-gradient(90deg, #00247d, #cf142b);
-      color: white;
-      text-align: center;
-      padding: 35px 20px;
-    }
+<link rel="icon" href="logo.png">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00247d">
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-    }
+<style>
 
-    .card {
-      background: white;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      border-left: 6px solid #00247d;
-    }
+/* GLOBAL */
+body{
+  margin:0;
+  font-family:system-ui,-apple-system;
+  background:#eef3ff;
+}
 
-    h2 {
-      color: #00247d;
-    }
+/* HEADER */
+header{
+  background:linear-gradient(135deg,#00247d,#cf142b);
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+  border-bottom-left-radius:25px;
+  border-bottom-right-radius:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
 
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
+header h1{
+  margin:0;
+  font-size:20px;
+}
 
-    .btn {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
+header p{
+  margin-top:5px;
+  opacity:0.9;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      background: #111;
-      color: white;
-      font-size: 12px;
-    }
+/* CONTAINER */
+.container{
+  max-width:520px;
+  margin:auto;
+  padding:15px;
+}
 
-    .badge {
-      display: inline-block;
-      background: #cf142b;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 20px;
-      font-size: 12px;
-      margin-top: 10px;
-    }
-  </style>
+/* CARD */
+.card{
+  background:white;
+  margin:15px 0;
+  padding:16px;
+  border-radius:18px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+}
+
+/* BUTTON */
+.btn{
+  display:block;
+  text-align:center;
+  background:#25D366;
+  color:white;
+  padding:12px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+/* FLOAT BUTTON */
+.float{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#25D366;
+  color:white;
+  padding:15px;
+  border-radius:50%;
+  font-size:22px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* SERVICES GRID */
+.grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.service{
+  background:#f6f8ff;
+  padding:10px;
+  border-radius:12px;
+  font-size:13px;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.gallery img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+  border-radius:12px;
+  transition:0.3s;
+}
+
+.gallery img:hover{
+  transform:scale(1.05);
+}
+
+/* FEEDBACK */
+.feedback{
+  position:fixed;
+  left:15px;
+  bottom:18px;
+  background:#00247d;
+  color:white;
+  padding:12px 14px;
+  border-radius:30px;
+  text-decoration:none;
+  font-size:13px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.3);
+}
+
+small{
+  color:#666;
+}
+
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>🇬🇧 INDIA TO UK LIFE WITH SOLUTIONS ✈️</h1>
-  <p>Visa • Immigration • Documentation Support</p>
-  <div class="badge">Trusted UK Guidance Service</div>
+  <h1>🇬🇧 India to UK Life Premium</h1>
+  <p>Visa • Immigration • Legal Support</p>
 </header>
 
 <div class="container">
 
-  <!-- CONTACT -->
-  <div class="card">
-    <h2>📲 Contact Us</h2>
+<!-- SERVICES -->
+<div class="card">
+<h3>🧾 Our Premium Services</h3>
 
-    <p>📧 Email: <a href="mailto:Jangra.333435@gmail.com">Jangra.333435@gmail.com</a></p>
+<div class="grid">
+  <div class="service">✔ Visa Extension</div>
+  <div class="service">✔ Passport Renewal</div>
+  <div class="service">✔ VFS Appointment</div>
+  <div class="service">✔ Student Visa</div>
+  <div class="service">✔ Work Visa Help</div>
+  <div class="service">✔ Immigration Advice</div>
+</div>
 
-    <p>📸 Instagram:
-      <a href="https://instagram.com/india_to_uk_life" target="_blank">
-        @india_to_uk_life
-      </a>
-    </p>
+<a class="btn" href="https://wa.me/447362783542">💬 Chat on WhatsApp</a>
+</div>
 
-    <a class="btn" href="https://wa.me/447362783542" target="_blank">
-      💬 Chat on WhatsApp
-    </a>
-  </div>
+<!-- RESULTS -->
+<div class="card">
+<h3>📸 Success Results</h3>
 
-  <!-- SERVICES -->
-  <div class="card">
-    <h2>🧾 Our Services</h2>
-    <p>
-      ✔ Visa Extension Support<br>
-      ✔ Fee Waiver Applications<br>
-      ✔ VFS Appointment Help<br>
-      ✔ Passport Renewal Guidance<br>
-      ✔ EU Settlement Scheme Support<br>
-      ✔ Immigration Advice<br>
-      ✔ Travel Documentation Support
-    </p>
-  </div>
+<div class="gallery">
+  <img src="result1.jpg">
+  <img src="result2.jpg">
+  <img src="result3.jpg">
+  <img src="result4.jpg">
+</div>
 
-  <!-- ENQUIRY FORM -->
-  <div class="card">
-    <h2>📄 Enquiry Form</h2>
+<small>Real client visa approvals (add your images here)</small>
+</div>
 
-    <form onsubmit="sendWhatsApp(); return false;">
+<!-- ENQUIRY -->
+<div class="card">
+<h3>📄 Quick Enquiry</h3>
 
-      <label>Name</label>
-      <input type="text" id="name" required>
+<form onsubmit="sendWA(); return false;">
 
-      <label>Enquiry Category</label>
-      <select id="category">
-        <option>Visa Enquiry</option>
-        <option>Passport Renewal</option>
-        <option>EU Settlement Scheme</option>
-        <option>Work Visa</option>
-        <option>Student Visa</option>
-        <option>Visitor Visa</option>
-        <option>Other</option>
-      </select>
+<input id="name" placeholder="Your Name" required><br>
 
-      <label>Visa Status</label>
-      <select id="visa">
-        <option>Student Visa</option>
-        <option>Work Visa</option>
-        <option>Visitor Visa</option>
-        <option>Expired Visa</option>
-        <option>Other</option>
-      </select>
+<select id="type">
+<option>Visa Enquiry</option>
+<option>Student Visa</option>
+<option>Work Visa</option>
+<option>Passport</option>
+<option>Other</option>
+</select><br>
 
-      <label>Reason</label>
-      <textarea id="reason" rows="4" required></textarea>
+<textarea id="msg" placeholder="Write your issue..." required></textarea>
 
-      <button class="btn" type="submit">📨 Send via WhatsApp</button>
-    </form>
-  </div>
+<button class="btn" type="submit">Send via WhatsApp</button>
+
+</form>
+</div>
 
 </div>
 
-<footer>
-  We provide assistance & guidance only. Final decisions are made by official authorities.
-</footer>
+<!-- FLOAT -->
+<a class="float" href="https://wa.me/447362783542">💬</a>
+
+<!-- FEEDBACK -->
+<a class="feedback" href="https://wa.me/447362783542?text=I want to give feedback ⭐">
+⭐ Feedback
+</a>
 
 <script>
-function sendWhatsApp() {
-  let name = document.getElementById("name").value;
-  let category = document.getElementById("category").value;
-  let visa = document.getElementById("visa").value;
-  let reason = document.getElementById("reason").value;
+function sendWA(){
+  let name=document.getElementById("name").value;
+  let type=document.getElementById("type").value;
+  let msg=document.getElementById("msg").value;
 
-  let msg =
-    "🇬🇧 New Enquiry%0A%0A" +
-    "Name: " + name + "%0A" +
-    "Category: " + category + "%0A" +
-    "Visa Status: " + visa + "%0A" +
-    "Reason: " + reason;
+  let text="New Enquiry:%0AName: "+name+"%0AType: "+type+"%0AMessage: "+msg;
 
-  let url = "https://wa.me/447362783542?text=" + msg;
-  window.open(url, "_blank");
+  window.open("https://wa.me/447362783542?text="+text);
 }
 </script>
 
