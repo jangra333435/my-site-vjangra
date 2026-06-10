@@ -10,14 +10,25 @@
     body {
       margin: 0;
       font-family: Arial;
-      background: #f4f7ff;
+      background: #eef3ff;
     }
 
+    /* HEADER WITH UK STYLE */
     header {
-      background: linear-gradient(135deg, #1a73e8, #0d47a1);
+      background: linear-gradient(90deg, #00247d, #cf142b);
       color: white;
       text-align: center;
-      padding: 30px;
+      padding: 35px 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    header p {
+      margin-top: 8px;
+      font-size: 14px;
     }
 
     .container {
@@ -30,12 +41,22 @@
       background: white;
       padding: 20px;
       margin: 15px 0;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-left: 6px solid #00247d;
     }
 
     h2 {
-      color: #1a73e8;
+      color: #00247d;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
     }
 
     .btn {
@@ -43,27 +64,37 @@
       background: #25D366;
       color: white;
       padding: 12px 18px;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: bold;
-      margin-top: 10px;
+      cursor: pointer;
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+    .btn:hover {
+      background: #1ebe5d;
+    }
+
+    .flag {
+      font-size: 20px;
     }
 
     footer {
       text-align: center;
       padding: 15px;
-      background: #222;
+      background: #111;
       color: white;
       font-size: 12px;
+    }
+
+    /* small badge */
+    .badge {
+      display: inline-block;
+      background: #cf142b;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -71,8 +102,9 @@
 <body>
 
 <header>
-  <h1>🌍 INDIA TO UK LIFE WITH SOLUTIONS ✈️</h1>
-  <p>Visa • Immigration • Documents Support</p>
+  <h1>🇬🇧 INDIA TO UK LIFE WITH SOLUTIONS ✈️</h1>
+  <p>Visa • Immigration • Documentation Support</p>
+  <div class="badge">Trusted UK Guidance Service</div>
 </header>
 
 <div class="container">
@@ -81,82 +113,79 @@
   <div class="card">
     <h2>📲 Contact Us</h2>
 
-    <a class="btn" href="https://wa.me/447362783542" target="_blank">WhatsApp Chat</a>
-
     <p>📧 Email: <a href="mailto:Jangra.333435@gmail.com">Jangra.333435@gmail.com</a></p>
 
-    <p>📸 Instagram: 
+    <p>📸 Instagram:
       <a href="https://instagram.com/india_to_uk_life" target="_blank">
         @india_to_uk_life
       </a>
     </p>
+
+    <a class="btn" href="https://wa.me/447362783542" target="_blank">
+      💬 Chat on WhatsApp
+    </a>
   </div>
 
   <!-- SERVICES -->
   <div class="card">
     <h2>🧾 Our Services</h2>
     <p>
-      ✔ Passport Renewal<br>
       ✔ Visa Extension Support<br>
-      ✔ Fee Waiver Assistance<br>
+      ✔ Fee Waiver Applications<br>
       ✔ VFS Appointment Help<br>
-      ✔ Document Guidance<br>
-      ✔ Travel & Immigration Support
+      ✔ Passport Renewal Guidance<br>
+      ✔ Immigration Advice<br>
+      ✔ Travel Documentation Support
     </p>
   </div>
 
-  <!-- DOCUMENT FORM -->
+  <!-- ENQUIRY FORM -->
   <div class="card">
-    <h2>📄 Document Submission Form</h2>
+    <h2>📄 Enquiry Form</h2>
 
-    <form>
-      <label>Full Name</label>
-      <input type="text" placeholder="Enter your name">
+    <form onsubmit="sendWhatsApp(); return false;">
 
-      <label>Email (Gmail)</label>
-      <input type="email" placeholder="Enter your email">
+      <label>Name</label>
+      <input type="text" id="name" required>
 
-      <label>Post Code</label>
-      <input type="text" placeholder="Enter UK post code">
+      <label>Visa Status</label>
+      <select id="visa">
+        <option>Student Visa</option>
+        <option>Work Visa</option>
+        <option>Visitor Visa</option>
+        <option>Expired Visa</option>
+        <option>Other</option>
+      </select>
 
-      <label>Passport Number</label>
-      <input type="text" placeholder="Passport details">
+      <label>Reason</label>
+      <textarea id="reason" rows="4" required></textarea>
 
-      <label>Aadhaar Card Number (optional)</label>
-      <input type="text" placeholder="Aadhaar number">
-
-      <label>Nearest Police Station Name</label>
-      <input type="text" placeholder="Police station name">
-
-      <label>Upload Passport Photo</label>
-      <input type="file">
-
-      <label>Upload Old Passport</label>
-      <input type="file">
-
-      <label>Upload Aadhaar Card</label>
-      <input type="file">
-
-      <label>Upload Bank Statement</label>
-      <input type="file">
-
-      <label>Upload Signature (on blank paper)</label>
-      <input type="file">
-
-      <label>Message</label>
-      <textarea rows="4" placeholder="Write your request..."></textarea>
-
-      <a class="btn" href="https://wa.me/447362783542" target="_blank">
-        Submit via WhatsApp
-      </a>
+      <button class="btn" type="submit">📨 Send via WhatsApp</button>
     </form>
   </div>
 
 </div>
 
 <footer>
-  We only provide assistance & guidance services. Final decisions are made by official authorities.
+  We provide assistance & guidance only. Final decisions are made by official authorities.
 </footer>
+
+<script>
+function sendWhatsApp() {
+  let name = document.getElementById("name").value;
+  let visa = document.getElementById("visa").value;
+  let reason = document.getElementById("reason").value;
+
+  let msg =
+    "🇬🇧 New Enquiry%0A%0A" +
+    "Name: " + name + "%0A" +
+    "Visa Status: " + visa + "%0A" +
+    "Reason: " + reason;
+
+  let url = "https://wa.me/447362783542?text=" + msg;
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
