@@ -3,215 +3,455 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>India to UK Life - Premium App</title>
 
 <link rel="icon" href="logo.png">
-<link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#00247d">
 
 <style>
+*{box-sizing:border-box}
 
-/* GLOBAL */
 body{
   margin:0;
-  font-family:system-ui,-apple-system;
-  background:#eef3ff;
-}
-
-/* HEADER */
-header{
-  background:linear-gradient(135deg,#00247d,#cf142b);
+  font-family:system-ui,-apple-system,Segoe UI,sans-serif;
+  background:#071531;
   color:white;
-  text-align:center;
-  padding:30px 15px;
-  border-bottom-left-radius:25px;
-  border-bottom-right-radius:25px;
-  box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
-header h1{
-  margin:0;
-  font-size:20px;
+.hero{
+  min-height:100vh;
+  padding:25px 18px;
+  background:
+    radial-gradient(circle at top right,#6b21ff55,transparent 35%),
+    linear-gradient(135deg,#001b4f,#071531 55%,#160033);
+  overflow:hidden;
 }
 
-header p{
-  margin-top:5px;
-  opacity:0.9;
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:40px;
 }
 
-/* CONTAINER */
-.container{
-  max-width:520px;
-  margin:auto;
-  padding:15px;
+.logo{
+  font-weight:800;
+  font-size:18px;
 }
 
-/* CARD */
-.card{
-  background:white;
-  margin:15px 0;
-  padding:16px;
-  border-radius:18px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-3px);
-}
-
-/* BUTTON */
-.btn{
-  display:block;
-  text-align:center;
+.whatsapp{
   background:#25D366;
   color:white;
-  padding:12px;
-  border-radius:12px;
+  padding:11px 16px;
+  border-radius:14px;
   text-decoration:none;
-  font-weight:bold;
-  margin-top:10px;
+  font-weight:700;
 }
 
-/* FLOAT BUTTON */
+.hero-box{
+  display:grid;
+  gap:25px;
+  align-items:center;
+}
+
+.hero h1{
+  font-size:44px;
+  line-height:1.05;
+  margin:0;
+}
+
+.hero h1 span{
+  color:#ffcc4d;
+}
+
+.hero p{
+  color:#d8e2ff;
+  font-size:17px;
+}
+
+.badge{
+  display:inline-block;
+  background:#073b7a;
+  color:#24e4ff;
+  padding:8px 14px;
+  border-radius:30px;
+  font-weight:700;
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+.cta{
+  display:flex;
+  gap:12px;
+  margin-top:22px;
+}
+
+.btn{
+  flex:1;
+  text-align:center;
+  padding:14px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:800;
+}
+
+.gold{background:#ffcc4d;color:#111}
+.dark{border:1px solid #ffffff55;color:white}
+
+.phone-3d{
+  margin:auto;
+  width:230px;
+  height:410px;
+  background:linear-gradient(160deg,#0b72d9,#06142e);
+  border:8px solid #222;
+  border-radius:38px;
+  box-shadow:0 30px 80px #000,0 0 50px #7c3cff;
+  transform:rotate(-8deg);
+  animation:float 3s ease-in-out infinite;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.phone-3d h2{
+  font-size:25px;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0) rotate(-8deg)}
+  50%{transform:translateY(-18px) rotate(-5deg)}
+}
+
+.section{
+  padding:35px 16px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.title h2{
+  font-size:32px;
+  margin:5px 0;
+}
+
+.title p{
+  color:#c8d3ff;
+}
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+
+.service{
+  background:#0c1f48;
+  border:1px solid #ffffff20;
+  border-radius:20px;
+  padding:18px;
+  box-shadow:0 15px 30px #0005;
+}
+
+.results{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:22px;
+}
+
+.case-card{
+  background:#0c1f48;
+  border:1px solid #ffffff25;
+  border-radius:22px;
+  padding:14px;
+  box-shadow:0 18px 35px #0007;
+  animation:rise .8s ease both;
+}
+
+@keyframes rise{
+  from{opacity:0;transform:translateY(25px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.case-title{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.case-title h3{
+  margin:0;
+  font-size:18px;
+}
+
+.status{
+  background:#0bbf5a;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:800;
+}
+
+.compare{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.result-img{
+  position:relative;
+  overflow:hidden;
+  border-radius:16px;
+  background:white;
+}
+
+.result-img img{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  filter:blur(3px);
+  transform:scale(1.02);
+}
+
+.label{
+  position:absolute;
+  top:8px;
+  left:8px;
+  padding:5px 9px;
+  border-radius:8px;
+  font-size:11px;
+  font-weight:800;
+}
+
+.before{background:#ff4d5a}
+.after{background:#1fbf64}
+
+.note{
+  margin-top:10px;
+  color:#b8c5ef;
+  font-size:13px;
+}
+
+.form-card{
+  background:#0c1f48;
+  border-radius:22px;
+  padding:20px;
+  border:1px solid #ffffff25;
+}
+
+input,select,textarea{
+  width:100%;
+  padding:14px;
+  margin:8px 0;
+  border-radius:12px;
+  border:none;
+  outline:none;
+}
+
+button{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:14px;
+  background:#25D366;
+  color:white;
+  font-weight:800;
+  font-size:16px;
+}
+
 .float{
   position:fixed;
   right:18px;
   bottom:18px;
   background:#25D366;
   color:white;
-  padding:15px;
+  width:58px;
+  height:58px;
   border-radius:50%;
-  font-size:22px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:28px;
+  box-shadow:0 10px 25px #0008;
+  z-index:999;
 }
 
-/* SERVICES GRID */
-.grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-.service{
-  background:#f6f8ff;
-  padding:10px;
-  border-radius:12px;
-  font-size:13px;
-}
-
-/* GALLERY */
-.gallery{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-.gallery img{
-  width:100%;
-  height:120px;
-  object-fit:cover;
-  border-radius:12px;
-  transition:0.3s;
-}
-
-.gallery img:hover{
-  transform:scale(1.05);
-}
-
-/* FEEDBACK */
 .feedback{
   position:fixed;
   left:15px;
-  bottom:18px;
-  background:#00247d;
+  bottom:20px;
+  background:#124fbb;
   color:white;
-  padding:12px 14px;
+  padding:12px 15px;
   border-radius:30px;
   text-decoration:none;
   font-size:13px;
-  box-shadow:0 5px 10px rgba(0,0,0,0.3);
+  font-weight:700;
+  z-index:999;
 }
 
-small{
-  color:#666;
+footer{
+  text-align:center;
+  padding:25px;
+  background:#020817;
+  color:#aab7df;
+  font-size:13px;
 }
 
+@media(min-width:800px){
+  .hero-box{grid-template-columns:1.1fr .9fr}
+  .results{grid-template-columns:repeat(2,1fr)}
+  .services{grid-template-columns:repeat(3,1fr)}
+}
+
+@media(max-width:480px){
+  .hero h1{font-size:36px}
+  .result-img img{height:220px}
+}
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>🇬🇧 India to UK Life Premium</h1>
-  <p>Visa • Immigration • Legal Support</p>
-</header>
+<section class="hero">
+  <div class="nav">
+    <div class="logo">🇬🇧 INDIA TO UK LIFE</div>
+    <a class="whatsapp" href="https://wa.me/447362783542">WhatsApp</a>
+  </div>
 
-<div class="container">
+  <div class="hero-box">
+    <div>
+      <div class="badge">⭐ Trusted Immigration Support</div>
+      <h1>Visa Extension <span>Results</span></h1>
+      <p>Helping people with visa extension, passport renewal, VFS appointments and immigration guidance in the UK.</p>
 
-<!-- SERVICES -->
-<div class="card">
-<h3>🧾 Our Premium Services</h3>
+      <div class="cta">
+        <a class="btn gold" href="#results">View Results</a>
+        <a class="btn dark" href="https://wa.me/447362783542">Contact Us</a>
+      </div>
+    </div>
 
-<div class="grid">
-  <div class="service">✔ Visa Extension</div>
-  <div class="service">✔ Passport Renewal</div>
-  <div class="service">✔ VFS Appointment</div>
-  <div class="service">✔ Student Visa</div>
-  <div class="service">✔ Work Visa Help</div>
-  <div class="service">✔ Immigration Advice</div>
-</div>
+    <div class="phone-3d">
+      <h2>UK Visa<br>Extension<br>✅ Approved</h2>
+    </div>
+  </div>
+</section>
 
-<a class="btn" href="https://wa.me/447362783542">💬 Chat on WhatsApp</a>
-</div>
+<section class="section">
+  <div class="title">
+    <h2>Our Services</h2>
+    <p>Professional support for UK immigration and documents</p>
+  </div>
 
-<!-- RESULTS -->
-<div class="card">
-<h3>📸 Success Results</h3>
+  <div class="services">
+    <div class="service">✅ Visa Extension</div>
+    <div class="service">✅ Passport Renewal</div>
+    <div class="service">✅ VFS Appointment</div>
+    <div class="service">✅ Fee Waiver</div>
+    <div class="service">✅ Student Visa</div>
+    <div class="service">✅ Work Visa Help</div>
+  </div>
+</section>
 
-<div class="gallery">
-  <img src="result1.jpg">
-  <img src="result2.jpg">
-  <img src="result3.jpg">
-  <img src="result4.jpg">
-</div>
+<section class="section" id="results">
+  <div class="title">
+    <h2>Visa Extension Results</h2>
+    <p>Before and after client results. Personal details are blurred for privacy.</p>
+  </div>
 
-<small>Real client visa approvals (add your images here)</small>
-</div>
+  <div class="results">
 
-<!-- ENQUIRY -->
-<div class="card">
-<h3>📄 Quick Enquiry</h3>
+    <div class="case-card">
+      <div class="case-title"><h3>Amit Kumar</h3><span class="status">APPROVED</span></div>
+      <div class="compare">
+        <div class="result-img"><span class="label before">BEFORE</span><img src="amit-before.jpg"></div>
+        <div class="result-img"><span class="label after">AFTER</span><img src="amit-after.jpg"></div>
+      </div>
+      <div class="note">Before: decision pending. After: right to work granted.</div>
+    </div>
 
-<form onsubmit="sendWA(); return false;">
+    <div class="case-card">
+      <div class="case-title"><h3>Renuka Devi</h3><span class="status">APPROVED</span></div>
+      <div class="compare">
+        <div class="result-img"><span class="label before">BEFORE</span><img src="renuka-before.jpg"></div>
+        <div class="result-img"><span class="label after">AFTER</span><img src="renuka-after.jpg"></div>
+      </div>
+      <div class="note">Before: decision pending. After: extension result received.</div>
+    </div>
 
-<input id="name" placeholder="Your Name" required><br>
+    <div class="case-card">
+      <div class="case-title"><h3>Lavish</h3><span class="status">APPROVED</span></div>
+      <div class="compare">
+        <div class="result-img"><span class="label before">BEFORE</span><img src="lavish-before.jpg"></div>
+        <div class="result-img"><span class="label after">AFTER</span><img src="lavish-after.jpg"></div>
+      </div>
+      <div class="note">Before and after visa extension result.</div>
+    </div>
 
-<select id="type">
-<option>Visa Enquiry</option>
-<option>Student Visa</option>
-<option>Work Visa</option>
-<option>Passport</option>
-<option>Other</option>
-</select><br>
+    <div class="case-card">
+      <div class="case-title"><h3>Payal</h3><span class="status">APPROVED</span></div>
+      <div class="compare">
+        <div class="result-img"><span class="label before">BEFORE</span><img src="payal-before.jpg"></div>
+        <div class="result-img"><span class="label after">AFTER</span><img src="payal-after.jpg"></div>
+      </div>
+      <div class="note">Extension result successfully updated.</div>
+    </div>
 
-<textarea id="msg" placeholder="Write your issue..." required></textarea>
+    <div class="case-card">
+      <div class="case-title"><h3>Arjun Singh</h3><span class="status">PENDING</span></div>
+      <div class="compare">
+        <div class="result-img"><span class="label before">BEFORE</span><img src="arjun-before.jpg"></div>
+        <div class="result-img"><span class="label after">AFTER</span><img src="coming-soon.jpg"></div>
+      </div>
+      <div class="note">After screenshot can be added later.</div>
+    </div>
 
-<button class="btn" type="submit">Send via WhatsApp</button>
+    <div class="case-card">
+      <div class="case-title"><h3>Sangam</h3><span class="status">PENDING</span></div>
+      <div class="compare">
+        <div class="result-img"><span class="label before">BEFORE</span><img src="sangam-before.jpg"></div>
+        <div class="result-img"><span class="label after">AFTER</span><img src="coming-soon.jpg"></div>
+      </div>
+      <div class="note">After screenshot can be added later.</div>
+    </div>
 
-</form>
-</div>
+  </div>
+</section>
 
-</div>
+<section class="section">
+  <div class="title">
+    <h2>Quick Enquiry</h2>
+    <p>Send your enquiry directly on WhatsApp</p>
+  </div>
 
-<!-- FLOAT -->
+  <div class="form-card">
+    <form onsubmit="sendWA(); return false;">
+      <input id="name" placeholder="Your Name" required>
+      <select id="type">
+        <option>Visa Extension</option>
+        <option>Passport Renewal</option>
+        <option>VFS Appointment</option>
+        <option>Fee Waiver</option>
+        <option>Other</option>
+      </select>
+      <textarea id="msg" placeholder="Write your issue..." rows="4" required></textarea>
+      <button type="submit">Send via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  We provide assistance and guidance only. Final decisions are made by official authorities.
+</footer>
+
 <a class="float" href="https://wa.me/447362783542">💬</a>
-
-<!-- FEEDBACK -->
-<a class="feedback" href="https://wa.me/447362783542?text=I want to give feedback ⭐">
-⭐ Feedback
-</a>
+<a class="feedback" href="https://wa.me/447362783542?text=I want to give feedback ⭐">⭐ Feedback</a>
 
 <script>
 function sendWA(){
@@ -220,8 +460,7 @@ function sendWA(){
   let msg=document.getElementById("msg").value;
 
   let text="New Enquiry:%0AName: "+name+"%0AType: "+type+"%0AMessage: "+msg;
-
-  window.open("https://wa.me/447362783542?text="+text);
+  window.open("https://wa.me/447362783542?text="+encodeURIComponent(text),"_blank");
 }
 </script>
 
