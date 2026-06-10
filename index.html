@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>India to UK Life - Premium App</title>
 
-<link rel="icon" href="logo.png">
+<title>India to UK Life</title>
 <meta name="theme-color" content="#00247d">
 
 <style>
@@ -24,19 +23,18 @@ body{
   background:
     radial-gradient(circle at top right,#6b21ff55,transparent 35%),
     linear-gradient(135deg,#001b4f,#071531 55%,#160033);
-  overflow:hidden;
 }
 
 .nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  margin-bottom:40px;
+  margin-bottom:45px;
 }
 
 .logo{
   font-weight:800;
-  font-size:18px;
+  font-size:17px;
 }
 
 .whatsapp{
@@ -54,8 +52,19 @@ body{
   align-items:center;
 }
 
+.badge{
+  display:inline-block;
+  background:#073b7a;
+  color:#24e4ff;
+  padding:8px 14px;
+  border-radius:30px;
+  font-weight:700;
+  font-size:13px;
+  margin-bottom:15px;
+}
+
 .hero h1{
-  font-size:44px;
+  font-size:43px;
   line-height:1.05;
   margin:0;
 }
@@ -67,17 +76,6 @@ body{
 .hero p{
   color:#d8e2ff;
   font-size:17px;
-}
-
-.badge{
-  display:inline-block;
-  background:#073b7a;
-  color:#24e4ff;
-  padding:8px 14px;
-  border-radius:30px;
-  font-weight:700;
-  font-size:13px;
-  margin-bottom:15px;
 }
 
 .cta{
@@ -125,7 +123,7 @@ body{
 
 .section{
   padding:35px 16px;
-  max-width:1100px;
+  max-width:1050px;
   margin:auto;
 }
 
@@ -155,86 +153,6 @@ body{
   border-radius:20px;
   padding:18px;
   box-shadow:0 15px 30px #0005;
-}
-
-.results{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:22px;
-}
-
-.case-card{
-  background:#0c1f48;
-  border:1px solid #ffffff25;
-  border-radius:22px;
-  padding:14px;
-  box-shadow:0 18px 35px #0007;
-  animation:rise .8s ease both;
-}
-
-@keyframes rise{
-  from{opacity:0;transform:translateY(25px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-.case-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:12px;
-}
-
-.case-title h3{
-  margin:0;
-  font-size:18px;
-}
-
-.status{
-  background:#0bbf5a;
-  padding:6px 10px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:800;
-}
-
-.compare{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-
-.result-img{
-  position:relative;
-  overflow:hidden;
-  border-radius:16px;
-  background:white;
-}
-
-.result-img img{
-  width:100%;
-  height:280px;
-  object-fit:cover;
-  filter:blur(3px);
-  transform:scale(1.02);
-}
-
-.label{
-  position:absolute;
-  top:8px;
-  left:8px;
-  padding:5px 9px;
-  border-radius:8px;
-  font-size:11px;
-  font-weight:800;
-}
-
-.before{background:#ff4d5a}
-.after{background:#1fbf64}
-
-.note{
-  margin-top:10px;
-  color:#b8c5ef;
-  font-size:13px;
 }
 
 .form-card{
@@ -306,13 +224,11 @@ footer{
 
 @media(min-width:800px){
   .hero-box{grid-template-columns:1.1fr .9fr}
-  .results{grid-template-columns:repeat(2,1fr)}
   .services{grid-template-columns:repeat(3,1fr)}
 }
 
 @media(max-width:480px){
   .hero h1{font-size:36px}
-  .result-img img{height:220px}
 }
 </style>
 </head>
@@ -327,23 +243,23 @@ footer{
 
   <div class="hero-box">
     <div>
-      <div class="badge">⭐ Trusted Immigration Support</div>
-      <h1>Visa Extension <span>Results</span></h1>
-      <p>Helping people with visa extension, passport renewal, VFS appointments and immigration guidance in the UK.</p>
+      <div class="badge">⭐ Trusted UK Guidance Service</div>
+      <h1>Visa & Immigration <span>Support</span></h1>
+      <p>Helping people with visa extension, passport renewal, VFS appointments, fee waiver applications and UK documentation support.</p>
 
       <div class="cta">
-        <a class="btn gold" href="#results">View Results</a>
+        <a class="btn gold" href="#services">Our Services</a>
         <a class="btn dark" href="https://wa.me/447362783542">Contact Us</a>
       </div>
     </div>
 
     <div class="phone-3d">
-      <h2>UK Visa<br>Extension<br>✅ Approved</h2>
+      <h2>UK Visa<br>Support<br>✅ Guidance</h2>
     </div>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="services">
   <div class="title">
     <h2>Our Services</h2>
     <p>Professional support for UK immigration and documents</p>
@@ -353,74 +269,12 @@ footer{
     <div class="service">✅ Visa Extension</div>
     <div class="service">✅ Passport Renewal</div>
     <div class="service">✅ VFS Appointment</div>
-    <div class="service">✅ Fee Waiver</div>
-    <div class="service">✅ Student Visa</div>
+    <div class="service">✅ Fee Waiver Applications</div>
+    <div class="service">✅ Student Visa Help</div>
     <div class="service">✅ Work Visa Help</div>
-  </div>
-</section>
-
-<section class="section" id="results">
-  <div class="title">
-    <h2>Visa Extension Results</h2>
-    <p>Before and after client results. Personal details are blurred for privacy.</p>
-  </div>
-
-  <div class="results">
-
-    <div class="case-card">
-      <div class="case-title"><h3>Amit Kumar</h3><span class="status">APPROVED</span></div>
-      <div class="compare">
-        <div class="result-img"><span class="label before">BEFORE</span><img src="amit-before.jpg"></div>
-        <div class="result-img"><span class="label after">AFTER</span><img src="amit-after.jpg"></div>
-      </div>
-      <div class="note">Before: decision pending. After: right to work granted.</div>
-    </div>
-
-    <div class="case-card">
-      <div class="case-title"><h3>Renuka Devi</h3><span class="status">APPROVED</span></div>
-      <div class="compare">
-        <div class="result-img"><span class="label before">BEFORE</span><img src="renuka-before.jpg"></div>
-        <div class="result-img"><span class="label after">AFTER</span><img src="renuka-after.jpg"></div>
-      </div>
-      <div class="note">Before: decision pending. After: extension result received.</div>
-    </div>
-
-    <div class="case-card">
-      <div class="case-title"><h3>Lavish</h3><span class="status">APPROVED</span></div>
-      <div class="compare">
-        <div class="result-img"><span class="label before">BEFORE</span><img src="lavish-before.jpg"></div>
-        <div class="result-img"><span class="label after">AFTER</span><img src="lavish-after.jpg"></div>
-      </div>
-      <div class="note">Before and after visa extension result.</div>
-    </div>
-
-    <div class="case-card">
-      <div class="case-title"><h3>Payal</h3><span class="status">APPROVED</span></div>
-      <div class="compare">
-        <div class="result-img"><span class="label before">BEFORE</span><img src="payal-before.jpg"></div>
-        <div class="result-img"><span class="label after">AFTER</span><img src="payal-after.jpg"></div>
-      </div>
-      <div class="note">Extension result successfully updated.</div>
-    </div>
-
-    <div class="case-card">
-      <div class="case-title"><h3>Arjun Singh</h3><span class="status">PENDING</span></div>
-      <div class="compare">
-        <div class="result-img"><span class="label before">BEFORE</span><img src="arjun-before.jpg"></div>
-        <div class="result-img"><span class="label after">AFTER</span><img src="coming-soon.jpg"></div>
-      </div>
-      <div class="note">After screenshot can be added later.</div>
-    </div>
-
-    <div class="case-card">
-      <div class="case-title"><h3>Sangam</h3><span class="status">PENDING</span></div>
-      <div class="compare">
-        <div class="result-img"><span class="label before">BEFORE</span><img src="sangam-before.jpg"></div>
-        <div class="result-img"><span class="label after">AFTER</span><img src="coming-soon.jpg"></div>
-      </div>
-      <div class="note">After screenshot can be added later.</div>
-    </div>
-
+    <div class="service">✅ Tourist Visa</div>
+    <div class="service">✅ Documentation Support</div>
+    <div class="service">✅ General Immigration Guidance</div>
   </div>
 </section>
 
@@ -433,14 +287,20 @@ footer{
   <div class="form-card">
     <form onsubmit="sendWA(); return false;">
       <input id="name" placeholder="Your Name" required>
+
       <select id="type">
         <option>Visa Extension</option>
         <option>Passport Renewal</option>
         <option>VFS Appointment</option>
         <option>Fee Waiver</option>
+        <option>Student Visa</option>
+        <option>Work Visa</option>
+        <option>Tourist Visa</option>
         <option>Other</option>
       </select>
+
       <textarea id="msg" placeholder="Write your issue..." rows="4" required></textarea>
+
       <button type="submit">Send via WhatsApp</button>
     </form>
   </div>
@@ -459,7 +319,7 @@ function sendWA(){
   let type=document.getElementById("type").value;
   let msg=document.getElementById("msg").value;
 
-  let text="New Enquiry:%0AName: "+name+"%0AType: "+type+"%0AMessage: "+msg;
+  let text="New Enquiry:\nName: "+name+"\nType: "+type+"\nMessage: "+msg;
   window.open("https://wa.me/447362783542?text="+encodeURIComponent(text),"_blank");
 }
 </script>
