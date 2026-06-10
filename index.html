@@ -13,22 +13,11 @@
       background: #eef3ff;
     }
 
-    /* HEADER WITH UK STYLE */
     header {
       background: linear-gradient(90deg, #00247d, #cf142b);
       color: white;
       text-align: center;
       padding: 35px 20px;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 26px;
-    }
-
-    header p {
-      margin-top: 8px;
-      font-size: 14px;
     }
 
     .container {
@@ -70,14 +59,6 @@
       cursor: pointer;
     }
 
-    .btn:hover {
-      background: #1ebe5d;
-    }
-
-    .flag {
-      font-size: 20px;
-    }
-
     footer {
       text-align: center;
       padding: 15px;
@@ -86,7 +67,6 @@
       font-size: 12px;
     }
 
-    /* small badge */
     .badge {
       display: inline-block;
       background: #cf142b;
@@ -134,6 +114,7 @@
       ✔ Fee Waiver Applications<br>
       ✔ VFS Appointment Help<br>
       ✔ Passport Renewal Guidance<br>
+      ✔ EU Settlement Scheme Support<br>
       ✔ Immigration Advice<br>
       ✔ Travel Documentation Support
     </p>
@@ -147,6 +128,17 @@
 
       <label>Name</label>
       <input type="text" id="name" required>
+
+      <label>Enquiry Category</label>
+      <select id="category">
+        <option>Visa Enquiry</option>
+        <option>Passport Renewal</option>
+        <option>EU Settlement Scheme</option>
+        <option>Work Visa</option>
+        <option>Student Visa</option>
+        <option>Visitor Visa</option>
+        <option>Other</option>
+      </select>
 
       <label>Visa Status</label>
       <select id="visa">
@@ -173,12 +165,14 @@
 <script>
 function sendWhatsApp() {
   let name = document.getElementById("name").value;
+  let category = document.getElementById("category").value;
   let visa = document.getElementById("visa").value;
   let reason = document.getElementById("reason").value;
 
   let msg =
     "🇬🇧 New Enquiry%0A%0A" +
     "Name: " + name + "%0A" +
+    "Category: " + category + "%0A" +
     "Visa Status: " + visa + "%0A" +
     "Reason: " + reason;
 
